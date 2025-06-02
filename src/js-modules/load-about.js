@@ -1,17 +1,23 @@
 export function loadAbout() {
-    console.log("Executing 'loadMenu()")
+    console.log("Executing 'loadAbout()")
     
-    const homeHeader = document.createElement("h1");
-    homeHeader.textContent = "ABOUT US";
+    const aboutDiv = document.createElement("div");
 
-    const homeSubhead = document.createElement("h2");
-    homeSubhead.textContent = "The Best Restaurant Story";
+    const aboutHeader = document.createElement("h1");
+    aboutHeader.textContent = "ABOUT US";
+
+    const aboutSubhead = document.createElement("h2");
+    aboutSubhead.textContent = "The Best Restaurant Story";
+
+    aboutDiv.appendChild(aboutHeader);
+    aboutDiv.appendChild(aboutSubhead);
+
+    aboutDiv.classList.add("aboutDiv");
 
     const content = document.querySelector("#content");
     if (!content){
         console.log("content div not found!")
     } else{
-        content.appendChild(homeHeader);
-        content.appendChild(homeSubhead);
+        content.appendChild(aboutDiv);
     }
 }

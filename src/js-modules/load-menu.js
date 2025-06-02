@@ -1,11 +1,19 @@
 export function loadMenu() {
     console.log("Executing 'loadMenu()")
-    const homeHeader = document.createElement("h1");
-    homeHeader.textContent = "OUR INCREDIBLE MENU";
+
+    const menuDiv = document.createElement("div");
+
+    const menuHeader = document.createElement("h1");
+    menuHeader.textContent = "OUR AMAZING MENU";
+
+    menuDiv.appendChild(menuHeader);
+
+    menuDiv.classList.add("menuDiv");
+
     const content = document.querySelector("#content");
     if (!content){
         console.log("content div not found!")
     } else{
-        content.appendChild(homeHeader);
+        content.appendChild(menuDiv);
     }
 }
